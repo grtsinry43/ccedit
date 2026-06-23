@@ -1,6 +1,6 @@
 {
   "name": "ccedit-monorepo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Claude Code Session Editor - TUI tool for precise session history editing",
   "private": true,
   "type": "module",
