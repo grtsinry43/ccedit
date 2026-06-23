@@ -1,4 +1,4 @@
-# Claude Code Session Editor (ccedit)
+# Claude Code Session Editor (ccsessed)
 
 A TUI for browsing, selecting, and precisely editing Claude Code session history.
 
@@ -21,22 +21,22 @@ A TUI for browsing, selecting, and precisely editing Claude Code session history
 
 ```bash
 # Run the latest published version directly — no install needed
-npx ccedit
+npx ccsessed
 
 # …or install it globally
-npm install -g ccedit
-ccedit
+npm install -g ccsessed
+ccsessed
 ```
 
 Run it from inside a project directory and it lists that project's sessions.
 
 ```bash
 cd /path/to/your/project
-ccedit                       # list sessions for this directory
-ccedit <session-id>          # edit a specific session directly
-ccedit -p /other/project     # point at a different project path
-ccedit --repair              # repair a broken session chain
-ccedit --help
+ccsessed                       # list sessions for this directory
+ccsessed <session-id>          # edit a specific session directly
+ccsessed -p /other/project     # point at a different project path
+ccsessed --repair              # repair a broken session chain
+ccsessed --help
 ```
 
 Requires **Node.js >= 22**.
@@ -107,7 +107,7 @@ ccedit/
 │   ├── tui/      # React + Ink components and the CLI entry
 │   └── shared/   # small utilities
 └── scripts/
-    └── package.cjs   # esbuild bundle → ./dist (publishable `ccedit` package)
+    └── package.cjs   # esbuild bundle → ./dist (publishable `ccsessed` package)
 ```
 
 ```bash
@@ -121,7 +121,7 @@ pnpm run package           # bundle a publishable ./dist
 ### Publishing
 
 `scripts/package.cjs` bundles the workspace into a single self-contained
-`dist/ccedit.js` (with `ink`, `react`, and `commander` kept as external
+`dist/ccsessed.js` (with `ink`, `react`, and `commander` kept as external
 runtime dependencies) and stages a ready-to-publish package in `./dist`:
 
 ```bash

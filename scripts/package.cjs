@@ -21,7 +21,7 @@ const esbuild = require('esbuild');
 const ROOT = path.join(__dirname, '..');
 const DIST_DIR = path.join(ROOT, 'dist');
 const ENTRY = path.join(ROOT, 'packages', 'tui', 'dist', 'index.js');
-const OUTPUT = path.join(DIST_DIR, 'ccedit.js');
+const OUTPUT = path.join(DIST_DIR, 'ccsessed.js');
 
 const rootPkg = require(path.join(ROOT, 'package.json'));
 
@@ -76,12 +76,12 @@ fs.chmodSync(OUTPUT, 0o755);
 
 console.log('4. Generating dist/package.json...');
 const distPkg = {
-  name: 'ccedit',
+  name: 'ccsessed',
   version: rootPkg.version,
   description: rootPkg.description,
   type: 'module',
-  bin: { ccedit: './ccedit.js' },
-  files: ['ccedit.js', 'README.md'],
+  bin: { ccsessed: './ccsessed.js' },
+  files: ['ccsessed.js', 'README.md'],
   dependencies: RUNTIME_DEPS,
   engines: { node: '>=22' },
   keywords: ['claude', 'claude-code', 'session', 'editor', 'tui', 'jsonl', 'cli'],
@@ -102,5 +102,5 @@ if (fs.existsSync(readme)) {
 
 const sizeKb = (fs.statSync(OUTPUT).size / 1024).toFixed(1);
 console.log(`\n✅ Build complete — staged ./dist (${distPkg.name}@${distPkg.version}, ${sizeKb} kB)`);
-console.log('   Test locally:  node dist/ccedit.js --help');
+console.log('   Test locally:  node dist/ccsessed.js --help');
 console.log('   Publish:       npm publish ./dist');

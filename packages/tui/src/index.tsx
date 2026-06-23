@@ -8,7 +8,7 @@ import App from './components/App.js';
 const program = new Command();
 
 program
-  .name('ccedit')
+  .name('ccsessed')
   .description('Claude Code Session Editor - TUI for precise session history editing')
   .version('1.0.0')
   .argument('[session-id]', 'Session ID to edit directly')
