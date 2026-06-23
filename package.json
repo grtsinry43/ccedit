@@ -1,0 +1,30 @@
+{
+  "name": "ccedit-monorepo",
+  "version": "0.1.0",
+  "description": "Claude Code Session Editor - TUI tool for precise session history editing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "test:integration": "vitest run test/",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "package": "node scripts/package.cjs",
+    "release": "node scripts/package.cjs && echo \"\\nStaged ./dist — run: npm publish ./dist\""
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "esbuild": "^0.28.0",
+    "turbo": "^2.9.15",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.0.9",
+  "author": "grtsinry43",
+  "license": "MIT"
+}

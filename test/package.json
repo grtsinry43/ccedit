@@ -1,0 +1,24 @@
+{
+  "name": "@ccedit/integration-tests",
+  "version": "1.0.0",
+  "description": "Integration tests for Claude Code session editor",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@ccedit/core": "workspace:*",
+    "@ccedit/shared": "workspace:*",
+    "@ccedit/tui": "workspace:*",
+    "ink-testing-library": "^4.0.0",
+    "react": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "vitest": "^4.0.0"
+  },
+  "author": "grtsinry43",
+  "license": "MIT"
+}

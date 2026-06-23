@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+packages/*/dist/
+
+# Turborepo
+.turbo/
+
+# Backups created by ccedit when saving sessions
+*.bak
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# npm pack artifacts
+*.tgz
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp

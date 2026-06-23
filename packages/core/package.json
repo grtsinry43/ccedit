@@ -1,0 +1,29 @@
+{
+  "name": "@ccedit/core",
+  "version": "1.0.0",
+  "description": "Core logic for Claude Code session editor - JSONL parsing, tool analysis, chain repair",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "jsdiff": "^1.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.0",
+    "vitest": "^4.0.0"
+  },
+  "author": "grtsinry43",
+  "license": "MIT"
+}

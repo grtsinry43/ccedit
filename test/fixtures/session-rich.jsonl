@@ -1,0 +1,24 @@
+{"type":"permission-mode","permissionMode":"acceptEdits"}
+{"type":"file-history-snapshot","messageId":"snapshot-1","snapshot":{"repoSnapshot":{"trackedFileBackups":{"/src/App.tsx":{"version":"0001","contentHash":"abc"}},"gitBranchSha":"deadbeef"}},"isSnapshotUpdate":false}
+{"type":"summary","summary":"Earlier 12 messages summarised into 'login UI work'","leafUuid":"msg-006"}
+{"uuid":"msg-001","parentUuid":null,"type":"user","timestamp":"2026-06-01T09:00:00.000Z","message":{"role":"user","content":"帮我写一个登录页面"},"isSidechain":false,"sessionId":"session-rich"}
+{"uuid":"msg-002","parentUuid":"msg-001","type":"assistant","timestamp":"2026-06-01T09:00:05.000Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"用户要写登录页面"},{"type":"text","text":"好的，我来分析项目结构"}]},"isSidechain":false}
+{"uuid":"msg-003","parentUuid":"msg-002","type":"assistant","timestamp":"2026-06-01T09:00:10.000Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu-rich-001","name":"Read","input":{"file_path":"/src/App.tsx"}}]},"isSidechain":false}
+{"uuid":"msg-004","parentUuid":"msg-003","type":"user","timestamp":"2026-06-01T09:00:15.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu-rich-001","content":"export default function App(){return null}","is_error":false}]},"isSidechain":false}
+{"uuid":"msg-005","parentUuid":"msg-004","type":"assistant","timestamp":"2026-06-01T09:00:20.000Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu-rich-002","name":"Write","input":{"file_path":"/src/Login.tsx","content":"export function Login(){return <form/>}"},"isSidechain":false}]}
+{"uuid":"msg-006","parentUuid":"msg-005","type":"user","timestamp":"2026-06-01T09:00:25.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu-rich-002","content":"File created","is_error":false}]},"isSidechain":false}
+{"uuid":"msg-007","parentUuid":"msg-006","type":"user","timestamp":"2026-06-01T09:01:00.000Z","isMeta":true,"message":{"role":"user","content":"<system-reminder>Today is 2026-06-01. Be concise.</system-reminder>"},"isSidechain":false}
+{"uuid":"msg-008","parentUuid":"msg-007","type":"assistant","timestamp":"2026-06-01T09:01:05.000Z","message":{"role":"assistant","content":[{"type":"text","text":"好的，登录页面已创建"}]},"isSidechain":false}
+{"uuid":"msg-009","parentUuid":"msg-008","type":"system","subtype":"compact_boundary","timestamp":"2026-06-01T10:00:00.000Z","content":"12 messages compacted","isSidechain":false}
+{"uuid":"msg-010","parentUuid":"msg-009","type":"user","timestamp":"2026-06-01T10:00:01.000Z","message":{"role":"user","content":"继续下一个功能"},"isSidechain":false}
+{"uuid":"msg-011","parentUuid":"msg-010","type":"assistant","timestamp":"2026-06-01T10:00:05.000Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu-rich-003","name":"Bash","input":{"command":"ls","description":"list dir"}}]},"isSidechain":false}
+{"uuid":"msg-012","parentUuid":"msg-011","type":"user","timestamp":"2026-06-01T10:00:10.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu-rich-003","content":"App.tsx\nLogin.tsx","is_error":false}]},"isSidechain":false}
+{"uuid":"msg-013","parentUuid":"msg-012","type":"assistant","timestamp":"2026-06-01T10:00:15.000Z","message":{"role":"assistant","content":[{"type":"text","text":"好，下一步开始写注册页面"}]},"isSidechain":false}
+{"uuid":"msg-014","parentUuid":"msg-013","type":"user","timestamp":"2026-06-01T10:00:20.000Z","message":{"role":"user","content":"别写，直接 review 现有代码"},"isSidechain":false}
+{"uuid":"side-agent-1","parentUuid":"msg-014","type":"user","timestamp":"2026-06-01T10:00:25.000Z","message":{"role":"user","content":"review the Login.tsx file"},"isSidechain":true,"agentId":"a-001"}
+{"uuid":"side-agent-2","parentUuid":"side-agent-1","type":"assistant","timestamp":"2026-06-01T10:00:30.000Z","message":{"role":"assistant","content":[{"type":"text","text":"Login.tsx 看起来很基础，建议加表单校验"}]},"isSidechain":true,"agentId":"a-001"}
+{"uuid":"msg-015","parentUuid":"side-agent-2","type":"user","timestamp":"2026-06-01T10:00:40.000Z","message":{"role":"user","content":"好的，加校验"},"isSidechain":false}
+{"type":"custom-title","customTitle":"登录 + 注册任务","sessionId":"session-rich"}
+{"type":"tag","tag":"feature/login","sessionId":"session-rich"}
+{"type":"agent-name","agentName":"primary","sessionId":"session-rich"}
+{"type":"last-prompt","lastPrompt":"好的，加校验","leafUuid":"msg-015","sessionId":"session-rich"}

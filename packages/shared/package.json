@@ -1,0 +1,26 @@
+{
+  "name": "@ccedit/shared",
+  "version": "1.0.0",
+  "description": "Shared utilities for Claude Code session editor - path resolution, text processing",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.0",
+    "vitest": "^4.0.0"
+  },
+  "author": "grtsinry43",
+  "license": "MIT"
+}

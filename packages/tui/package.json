@@ -1,0 +1,36 @@
+{
+  "name": "@ccedit/tui",
+  "version": "1.0.0",
+  "description": "TUI components for Claude Code session editor - built with React + Ink",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "ccedit": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.tsx",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@ccedit/core": "workspace:*",
+    "@ccedit/shared": "workspace:*",
+    "ink": "^7.0.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.0.0",
+    "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^6.0.0",
+    "tsx": "^4.0.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "author": "grtsinry43",
+  "license": "MIT"
+}
